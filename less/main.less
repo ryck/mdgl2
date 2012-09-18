@@ -7,20 +7,70 @@ body {
 
 #hero {
 	color: @white;
-	#gradient .vertical(lighten(@blue, 5%), darken(@blue, 5%));
-	border-bottom: 1px solid darken(@white, 15%);
+	background-color: @blue;
+	border-bottom: 1px solid @white;
 }
 
 .sidebar, .main-content {
 	margin-top: 30px;
 }
+.sidebar.affix {
+top: 0;
+}
 
 .main-content {
 	section {
 		background-color: @white;
-		.border-radius(5px);
+		.border-radius(6px);
 		border: 1px solid @grayLighter;
 		margin-bottom: 1em;
-		padding: 1em;
+		padding: 1em 2em;
+	}
+}
+
+.sidebar {
+  width: 228px;
+  margin: 30px 0 0;
+  padding: 0;
+  background-color: #fff;
+  .border-radius(6px);
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+     -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+          box-shadow: 0 1px 4px rgba(0,0,0,.065);
+}
+.sidebar > li > a {
+  display: block;
+  *width: 190px;
+  margin: 0 0 -1px;
+  padding: 8px 14px;
+  border: 1px solid #e5e5e5;
+}
+.sidebar > li:first-child > a {
+  .border-radius(6px 6px 0 0);
+}
+.sidebar > li:last-child > a {
+  .border-radius(6px 6px 0 0);
+}
+.sidebar > .active > a {
+  position: relative;
+  z-index: 2;
+  padding: 9px 15px;
+  border: 0;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+  .box-shadow(inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1));
+}
+
+
+
+
+@media (max-width: 767px) {
+	.sidebar {
+		width: auto;
+		margin-bottom: 30px;
+		&.affix {
+			position: static;
+			width: auto;
+			top: 0;
+		}
 	}
 }
