@@ -1,3 +1,16 @@
 @import "bootstrap/bootstrap.less";
 @import "bootstrap/responsive.less";
 
+body {
+	background: url("../img/furley_bg.png");
+}
+
+#hero {
+	color: @white;
+	#gradient .vertical(lighten(@blue, 5%), darken(@blue, 5%));
+	border-bottom: 1px solid darken(@white, 15%);
+}
+
+.sidebar, .main-content {
+	margin-top: 30px;
+}

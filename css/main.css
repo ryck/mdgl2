@@ -7597,3 +7597,22 @@ ul.icons li .icon-large:before {
     overflow: visible !important;
   }
 }
+body {
+  background: url("../img/furley_bg.png");
+}
+#hero {
+  color: #ffffff;
+  background-color: #007e9e;
+  background-image: -moz-linear-gradient(top, #008eb3, #006680);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#008eb3), to(#006680));
+  background-image: -webkit-linear-gradient(top, #008eb3, #006680);
+  background-image: -o-linear-gradient(top, #008eb3, #006680);
+  background-image: linear-gradient(to bottom, #008eb3, #006680);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff008eb3', endColorstr='#ff006680', GradientType=0);
+  border-bottom: 1px solid #d9d9d9;
+}
+.sidebar,
+.main-content {
+  margin-top: 30px;
+}
